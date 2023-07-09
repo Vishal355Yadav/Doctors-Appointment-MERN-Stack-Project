@@ -30,7 +30,7 @@ const getUser= async()=>{
       localStorage.clear();
       console.log(error);
    }
-};
+}; 
 
 useEffect(()=> {
    if(!user){
