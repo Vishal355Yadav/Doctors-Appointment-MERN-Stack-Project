@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/RegisterStyles.css'
+import '../styles/RegisterStyles.css'
 import {Form,Input,message} from 'antd'
 import axios from 'axios'
 import {useDispatch} from 'react-redux'
