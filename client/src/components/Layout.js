@@ -52,8 +52,8 @@ const Layout = ({children}) => {
             <div className='content'>
                 <div className='header'>
                     <div className='header-content'>
-                    <Badge count={user && user.notification.length}>
-                    <i class="fa-solid fa-bell"></i>
+                    <Badge count={user && user.notification.length} onClick={()=> {navigate('/notification')}}>
+                    <i class="fa-solid fa-bell" style={{cursor:'pointer'}}></i>
                     </Badge>
                        
                         <Link to='/profile'>{user?.name}</Link>
