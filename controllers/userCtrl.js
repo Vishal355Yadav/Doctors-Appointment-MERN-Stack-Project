@@ -210,7 +210,7 @@ const bookingAvailabilityController =async(req,res)=>{
 const userAppointmentsController=async(req,res)=>{
     try{
         const appointments = await appointmentModel.find({
-            userId:req.body.userID
+            userId:req.body.userId
         });
         res.status(200).send({success:true,message:'Users Appointments Fetch Successfully',
     data: appointments});

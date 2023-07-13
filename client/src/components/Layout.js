@@ -30,7 +30,7 @@ const Layout = ({children}) => {
         },
         {
             name:'Appointments',
-            path:'/appointments',
+            path:'/doctor-appointments',
             icon:'fa-solid fa-list'
         },
         {
@@ -82,7 +82,8 @@ const Layout = ({children}) => {
                     <i class="fa-solid fa-bell" style={{cursor:'pointer'}}></i>
                     </Badge>
                        
-                        <Link to='/profile'>{user?.name}</Link>
+                        {user?.isDoctor && <Link to = {`/doctor/profile/${user?._id}`}>{user?.name}</Link>}
+                        {!user?.isDoctor && <Link to = {`/profile`}>{user?.name}</Link>}
                     </div>
                 </div>
                 <div className='body'>{children}</div>
