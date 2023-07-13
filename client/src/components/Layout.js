@@ -19,8 +19,34 @@ const Layout = ({children}) => {
         message.success("Logout Successfully")
         navigate('/login');
     }
+
+    // doctor menu 
+
+    const doctorMenu = [
+        {
+            name:'Home',
+            path:'/',
+            icon:'fa-solid fa-house',
+        },
+        {
+            name:'Appointments',
+            path:'/appointments',
+            icon:'fa-solid fa-list'
+        },
+        {
+            name:'Profile',
+            path:`/doctor/profile/${user?._id}`,
+            icon:'fa-solid fa-user',
+        },
+       
+    ];
+    // doctor menu
+
+
+
     //  render menu list
-    const SidebarMenu =user?.isAdmin ? adminMenu : userMenu
+    const SidebarMenu =user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu:userMenu ;
+    // const SidebarMenu =user?.isAdmin?adminMenu :userMenu;
   return (
     <>  
     <div className='main'>
