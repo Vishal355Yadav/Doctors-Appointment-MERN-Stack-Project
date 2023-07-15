@@ -224,7 +224,24 @@ const userAppointmentsController=async(req,res)=>{
     }
 
 }
+const getUserByIdController=async(req,res)=>{
+    try{
+        const doctor = await userModel.findOne({_id:req.body.userId})
+        res.status(200).send({
+            success:true,
+            message:' Single user info fetch',
+            data:doctor
+            
+        })
+    }catch(error){
+        console.log(error)
+        res.status(500).send({
+            success:false,error,
+            message: 'Error in Sigle info'
+        })
+    }
+}
 
 module.exports ={loginController,registerController,authController,
     applyDoctorController,getAllNotificationController,deleteAllNotificationController,
-    getAllDoctorsController,bookAppointmentController,bookingAvailabilityController,userAppointmentsController}
+    getAllDoctorsController,bookAppointmentController,bookingAvailabilityController,userAppointmentsController,getUserByIdController}

@@ -70,10 +70,10 @@ const Profile = () => {
     {doctor && (
          <Form layout='vertical' onFinish={handleFinish} className='m-3' initialValues={{
             ...doctor,
-            // timings:[
-            //     moment(doctor.timings[0],'HH:mm'),
-            //     moment(doctor.timings[1],'HH:mm')
-            //    ],
+            timings:[
+                moment(doctor.timings[0],'HH:mm'),
+                moment(doctor.timings[1],'HH:mm')
+               ],
          }}>
          <h4>Personal Details</h4>
              <Row gutter={20}> 
@@ -126,11 +126,11 @@ const Profile = () => {
                          <Input type= 'text' placeholder='your consultation fee'/>
                      </Form.Item>
                  </Col>
-                 {/* <Col x5={24} md={24} lg={8}>
+                 <Col x5={24} md={24} lg={8}>
                     <Form.Item label='Timings' name='timings' required rules={[{required:false}]}>
                         <TimePicker.RangePicker format= "HH:mm"/>
                     </Form.Item>
-                </Col> */}
+                </Col>
                  <Col x5={24} md={24} lg={8}></Col>
                  <Col x5={24} md={24} lg={8}><button className='btn btn-primary form-btn'>Update
                  </button></Col>

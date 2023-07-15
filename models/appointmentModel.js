@@ -13,6 +13,11 @@ const appointmentSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    phone:{
+        type :String,
+        required:true,
+        default:null
+    },
     userInfo:{
         type:String,
         required:true

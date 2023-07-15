@@ -42,8 +42,9 @@ const BookingPage = () => {
         {
           doctorId:params.doctorId,
           userId:user._id,
-          doctorInfo:doctors,
-          userInfo:user,
+          doctorInfo:doctors.firstName,
+          phone:doctors.phone,
+          userInfo:user.name,
           date:date,
           time:time
         },{

@@ -47,15 +47,10 @@ const DoctorAppointments = () => {
             title:'ID',
             dataIndex:'_id'
         },
-        // {
-        //     title:'Name',
-        //     dataIndex:'name',
-        //     render:(text,record)=>(
-        //         <span>
-        //         {record.doctorId.firstName} {record.doctorId.lastName}
-        //         </span>
-        //     ),
-        // },
+        {
+            title:'Patient Name',
+            dataIndex:'userInfo',
+        },
         // {
         //     title:'Phone',
         //     dataIndex:'phone',

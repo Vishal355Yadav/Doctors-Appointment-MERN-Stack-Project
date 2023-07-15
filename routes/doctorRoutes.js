@@ -17,4 +17,6 @@ router.get('/doctor-appointments',authMiddleware,doctorAppointmentController)
 
 // post update status
 router.post('/update-status',authMiddleware,updateStatusController)
+
+
 module.exports= router

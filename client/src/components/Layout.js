@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link ,useLocation,useNavigate} from 'react-router-dom'
-import { adminMenu, userMenu } from '../Data/data'
+// import { adminMenu, userMenu } from '../Data/data'
 import {message} from 'antd'
 import { Avatar, Badge, Space } from 'antd';
 
@@ -42,6 +42,52 @@ const Layout = ({children}) => {
     ];
     // doctor menu
 
+     const userMenu = [
+        {
+            name:'Home',
+            path:'/',
+            icon:'fa-solid fa-house',
+        },
+        {
+            name:'Appointments',
+            path:'/appointments',
+            icon:'fa-solid fa-list'
+        },
+        {
+            name:'Apply Doctor',
+            path:'/apply-doctor',
+            icon: 'fa-solid fa-user-doctor',
+        },
+        {
+            name:'Profile',
+            path:`/profile/${user?._id}`,
+            icon:'fa-solid fa-user',
+        },
+       
+    ]
+    // admin menu
+    
+     const adminMenu = [
+        {
+            name:'Home',
+            path:'/',
+            icon:'fa-solid fa-house',
+        },
+        {
+            name:'Doctors',
+            path:'/admin/doctors',
+            icon: 'fa-solid fa-user-doctor',
+        },{
+            name:'Users',
+            path:'/admin/users',
+            icon:'fa-solid fa-user',
+        },
+        {
+            name:'Profile',
+            path:`/profile/${user?._id}`,
+            icon:'fa-solid fa-user',
+        },
+    ]
 
 
     //  render menu list
@@ -83,7 +129,7 @@ const Layout = ({children}) => {
                     </Badge>
                        
                         {user?.isDoctor && <Link to = {`/doctor/profile/${user?._id}`}>{user?.name}</Link>}
-                        {!user?.isDoctor && <Link to = {`/profile`}>{user?.name}</Link>}
+                        {!user?.isDoctor && <Link to = {`/profile/${user?._id}`}>{user?.name}</Link>}
                     </div>
                 </div>
                 <div className='body'>{children}</div>
