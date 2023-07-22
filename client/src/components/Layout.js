@@ -99,7 +99,7 @@ const Layout = ({children}) => {
         <div className='layout'>
             <div className='sidebar'>
                 <div className='logo'>
-                    <h6>Doc App</h6>
+                    <h6>Doctor Appointment System</h6>
                     <hr></hr>
                 </div>
                 <div className='menu'>

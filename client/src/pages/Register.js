@@ -31,7 +31,7 @@ const Register = () => {
     <> 
       <div className='form-container'>
           <Form layout ='vertical ' onFinish = {onfinishHandler} className='register-form'>
-            <h3 className='text-center'> Register Form</h3>
+            <h4 className='text-center'> Register Doctor Appointment System</h4>
               <Form.Item label='Name' name='name'>
                 <Input type='text' required/>    
               </Form.Item>  

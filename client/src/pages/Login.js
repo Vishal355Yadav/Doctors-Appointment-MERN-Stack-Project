@@ -34,7 +34,7 @@ const Login = () => {
     <> 
       <div className='form-container'>
           <Form layout ='vertical ' onFinish = {onfinishHandler} className='register-form'>
-            <h3 className='text-center'> Login Form</h3> 
+            <h4 className='text-center'> Login Doctor Appointment System</h4> 
               <Form.Item label='Email' name='email'>
                 <Input type='email' required/>    
               </Form.Item> 
